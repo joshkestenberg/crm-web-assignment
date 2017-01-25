@@ -4,12 +4,19 @@
 require 'sinatra'
 require_relative 'contact'
 
+Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')
+
 get '/' do
   redirect to('/contacts')
 end
 
 get '/contacts' do
   erb :contacts
+end
+
+get '/contacts/1' do
+  @contact = Contact.find(1)
+  erb :show_contact
 end
 
 get '/about' do
