@@ -41,9 +41,6 @@ footer {
     font-weight: bold;
     text-align: center;
     padding: 16px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 main {
@@ -53,6 +50,7 @@ main {
 
 h3.contact-header {
     font-size: 25px;
+    /* font-weight: bold; */
     background-color: #ef7575;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -63,6 +61,8 @@ h3.contact-header {
 
 span.num-contacts {
     font-weight: 900;
+    /* text-decoration: underline; */
+    ne; */
     border-bottom: 5px solid #75efe9;
     border-bottom: 3px solid #75efe9;
 }
@@ -75,32 +75,4 @@ li.contact-email {
 
 li.contact-name {
     display: inline;
-}
-
-.contact.info {
-    background: #75efe9;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 14px;
-}
-
-li.contact-name {
-    font-size: 27px;
-    font-weight: 900;
-}
-
-li.contact-sub {
-    padding-top: 4px;
-    font-size: 14px;
-}
-
-span.contact-option {
-    color: blue;
-    text-decoration: underline;
-}
-
-li.contact-sub {
-    padding-top: 4px;
-    font-size: 14px;
 }

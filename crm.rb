@@ -4,15 +4,16 @@
 require 'sinatra'
 require_relative 'contact'
 
-
-
 get '/' do
-  @crm_app_name = "Bitmaker CRM"
-  erb :index
+  redirect to('/contacts')
 end
 
 get '/contacts' do
   erb :contacts
+end
+
+get '/about' do
+  erb :about
 end
 
 get '/contacts/new' do
