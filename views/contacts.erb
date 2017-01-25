@@ -1,16 +1,16 @@
 <% if Contact.all.count == 1 %>
-  <h3 class="contact-header">
+  <header class="body-header">
     There is <span class="num-contacts"><%= Contact.all.count.to_s %></span> contact
-  </h3>
+  </header>
 <% else %>
-  <h3 class="contact-header">
+  <header class="body-header">
     There are <span class="num-contacts"><%= Contact.all.count.to_s %></span> contacts
-  </h3>
+  </header>
 <% end %>
 
 <ul>
 <% Contact.all.each do |contact| %>
-  <div class="contact info">
+  <div class="body-item">
     <div class="contact">
       <li class="contact-name"><%= contact.first_name %> <%= contact.last_name %></li>
       <li class="contact-email">(<%= contact.email %>)</li>

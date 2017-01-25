@@ -10,14 +10,14 @@
 
   <body>
     <% @crm_app_name = "Bitmaker CRM" %>
-    <header>
+    <nav>
       <h1 class="logo"><%= @crm_app_name %></h1>
       <ul>
         <li class="menu-item"><a href="/contacts">Home</a></li>
         <li class="menu-item"><a href="/contacts/new">Add a contact</a></li>
         <li class="menu-item"><a href="/about">About</a></li>
       </ul>
-    </header>
+    </nav>
 
     <main>
       <%= yield %>
