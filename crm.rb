@@ -5,6 +5,8 @@ require 'sinatra'
 require_relative 'contact'
 
 Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')
+Contact.create('Dick', 'Army', 'ass@bitmakerlabs.com', 'Dickweed')
+Contact.create('Stink', 'McCoy', 'stinker@bitmakerlabs.com', 'Fartbutt')
 
 get '/' do
   redirect to('/contacts')
@@ -14,9 +16,13 @@ get '/contacts' do
   erb :contacts
 end
 
-get '/contacts/1' do
-  @contact = Contact.find(1)
-  erb :show_contact
+get '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    erb :show_contact
+  else
+    raise Sinatra::NotFound
+  end
 end
 
 get '/about' do

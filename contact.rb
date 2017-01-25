@@ -44,6 +44,7 @@ class Contact
         return contact
       end
     end
+    return nil
   end
 
   # This method should allow you to specify
