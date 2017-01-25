@@ -1,7 +1,21 @@
-<h1>All Contacts</h1>
+<% if Contact.all.count == 1 %>
+  <h3>
+    There is <span class="num_contacts"><%= Contact.all.count.to_s %></span> contact
+  </h3>
+<% else %>
+  <h3>
+    There are <span class="num_contacts"><%= Contact.all.count.to_s %></span> contacts
+  </h3>
+<% end %>
 
 <ul>
 <% Contact.all.each do |contact| %>
-  <li><%= contact.first_name %> <%= contact.last_name %></li>
+  <div class="contact">
+    <li><%= contact.first_name %> <%= contact.last_name %></li>
+    <li>(<%= contact.email %>)</li>
+  </div>
+  <div class="contact_option">
+    <li><span class="contact_option"><a href="/contacts/edit">Edit</a></span> | <span class="contact_option"><a href="/contacts/delete">Delete</a></span>
+  </div>
 <% end %>
 </ul>
