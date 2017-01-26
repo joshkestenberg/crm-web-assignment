@@ -4,10 +4,6 @@
 require 'sinatra'
 require_relative 'contact'
 
-Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')
-Contact.create('Dick', 'Army', 'ass@bitmakerlabs.com', 'Dickweed')
-Contact.create('Stink', 'McCoy', 'stinker@bitmakerlabs.com', 'Fartbutt')
-
 get '/' do
   redirect to('/contacts')
 end
@@ -69,4 +65,8 @@ put '/contacts/:id' do
   else
     raise Sinatra::NotFound
   end
+end
+
+after do
+  ActiveRecord::Base.connection.close
 end
