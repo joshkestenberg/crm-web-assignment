@@ -2,7 +2,7 @@
 
 body {
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 1em
 }
 
 a {
@@ -27,7 +27,7 @@ h1.logo {
     color: white;
     background: black;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 5em;
     text-align: center;
     padding: 14px;
 }
@@ -40,25 +40,27 @@ li.menu-item {
     margin-top: 2px;
     margin-bottom: 2px;
     font-weight: 900;
-    font-size: 26px;
+    font-size: 3em;
 }
 
 footer {
     background: black;
     color: white;
-    font-size: 14px;
+    font-size: 10px
     font-weight: bold;
     text-align: center;
     padding: 16px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 1em;
+    font-weight: bold;
 }
 
-/*CONTACTS PAGE*/
+/*CONTENT*/
 
 header.body-header {
-    font-size: 25px;
+    font-size: 2em;
     background-color: #ef7575;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -85,6 +87,7 @@ li.contact-email {
     display: inline;
     font-size: 22px;
     font-weight: 900;
+    color: white
 }
 
 li.contact-name {
@@ -123,3 +126,22 @@ li.contact-sub {
     padding-top: 4px;
     font-size: 14px;
 }
+
+
+form {
+    display: inline;
+}
+
+input[type="submit"] {
+    position: relative;
+    left:%;
+    padding: 12px;
+    font-size: 34px;
+}
+
+button {
+    position: relative;
+    padding: 12px;
+    font-size: 33px;
+}
+
