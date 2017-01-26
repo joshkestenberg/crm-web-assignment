@@ -11,15 +11,17 @@
 <ul>
 <% Contact.all.each do |contact| %>
   <div class="body-item">
-    <div class="contact">
-      <a class="contact_link" href="/contacts/<%= contact.id %>">
-        <li class="contact-name"><%= contact.first_name %> <%= contact.last_name %></li>
-      </a>
-      <li class="contact-email">(<%= contact.email %>)</li>
-    </div>
-    <div class="contact-option">
-      <li class="contact-sub"><span class="contact-option"><a href="/contacts/<%= contact.id %>/edit">Edit</a></span> | <span class="contact-option"><a href="/contacts/<%= contact.id %>/delete">Delete</a></span></li>
-    </div>
+    <ul>
+      <div class="contact">
+        <a class="contact_link" href="/contacts/<%= contact.id %>">
+          <li class="contact-name"><%= contact.first_name %> <%= contact.last_name %></li>
+        </a>
+        <li class="contact-email"><%= contact.email %></li>
+      </div>
+      <div class="contact-option">
+        <li class="contact-sub"><span class="contact-option"><a href="/contacts/<%= contact.id %>/edit">Edit</a></span> | <span class="contact-option"><a href="/contacts/<%= contact.id %>/delete">Delete</a></span></li>
+      </div>
+    <ul>
   </div>
 <% end %>
 </ul>

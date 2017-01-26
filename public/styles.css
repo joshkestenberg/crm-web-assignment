@@ -89,6 +89,12 @@ li.contact-email {
 
 li.contact-name {
     display: inline;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+li.contact-note {
+    padding: 10px;
 }
 
 .contact.info {
@@ -100,8 +106,7 @@ li.contact-name {
 }
 
 li.contact-name {
-    font-size: 27px;
-    font-weight: 900;
+
 }
 
 li.contact-sub {
